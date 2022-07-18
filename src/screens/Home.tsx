@@ -8,7 +8,7 @@ const Home: React.FC = () => {
   return (
     <View style={styles.container}>
       <Button
-        title="ユーザー一覧へ"
+        title="ユーザー一覧"
         onPress={() => {
           navigation.navigate('UserList');
         }}
