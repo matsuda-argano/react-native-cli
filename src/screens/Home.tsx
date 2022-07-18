@@ -1,5 +1,5 @@
 import React from 'react';
-import {Button, StyleSheet, Text, View} from 'react-native';
+import {Button, StyleSheet, View} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 import {RootStackNavProp} from '../types';
 
@@ -7,14 +7,10 @@ const Home: React.FC = () => {
   const navigation = useNavigation<RootStackNavProp<'Home'>>();
   return (
     <View style={styles.container}>
-      <Text>Home Screen</Text>
       <Button
-        title="詳細へ"
+        title="ユーザー一覧へ"
         onPress={() => {
-          navigation.navigate('Details', {
-            itemId: 86,
-            otherParam: 'anything you want here',
-          });
+          navigation.navigate('UserList');
         }}
       />
     </View>

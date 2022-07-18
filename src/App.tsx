@@ -1,7 +1,7 @@
 import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import {Details, Home} from './screens';
+import {Home, UserDetail, UserList} from './screens';
 import {RootStackParamList} from './types';
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
@@ -16,9 +16,14 @@ const App: React.FC = () => {
           options={{title: 'ホーム'}}
         />
         <Stack.Screen
-          name="Details"
-          component={Details}
-          options={{title: '詳細'}}
+          name="UserList"
+          component={UserList}
+          options={{title: 'ユーザー一覧'}}
+        />
+        <Stack.Screen
+          name="UserDetail"
+          component={UserDetail}
+          options={{title: 'ユーザー詳細'}}
         />
       </Stack.Navigator>
     </NavigationContainer>
